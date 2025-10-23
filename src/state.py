@@ -1,7 +1,7 @@
 from pydantic import BaseModel, Field
 from typing_extensions import TypedDict, Annotated
-# from langchain_core.messages import AnyMessage
-# from langgraph.graph.message import add_messages
+from langchain_core.messages import AnyMessage
+from langgraph.graph.message import add_messages
 
 class Email(BaseModel):
     id: str = Field("", description="Unique identifier of the email")
@@ -17,4 +17,4 @@ class GraphState(TypedDict):
     current_email: Email | str
     email_category: str
     email_response: Email | str
-    # messages: Annotated[list[AnyMessage], add_messages]
+    messages: Annotated[list[AnyMessage], add_messages]

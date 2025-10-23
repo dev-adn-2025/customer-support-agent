@@ -58,13 +58,6 @@ def __parse_email_message(message) -> Email:
         except:
             body = ''
 
-    # return {
-    #     'id': message["id"],
-    #     'subject': subject,
-    #     'sender': sender,
-    #     'date': date,
-    #     'body': body
-    # }
     return Email(
         id=message["id"],
         subject=subject,
