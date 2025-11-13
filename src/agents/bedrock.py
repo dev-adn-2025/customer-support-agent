@@ -10,6 +10,10 @@ llm_categorizer = init_chat_model(
     "google_genai:gemini-2.0-flash-lite", 
 )
 
+llm_writer = init_chat_model(
+    "google_genai:gemini-2.0-flash-lite", 
+)
+
 # bedrock_client = boto3.client("bedrock-runtime", region_name="us-east-2")
 
 # llm_writer = ChatBedrock(
